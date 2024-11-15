@@ -1,0 +1,20 @@
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-6">
+            <img [src]="cubo.imagen" class="img-fluid" alt="Cubo">
+        </div>
+        <div class="col-md-6">
+            <h1>{{ cubo.nombre }}</h1>
+            <p><strong>Modelo:</strong> {{ cubo.modelo }}</p>
+            <p><strong>Marca:</strong> {{ cubo.marca }}</p>
+            <p><strong>Color:</strong> {{ cubo.color }}</p>
+            <p><strong>Precio:</strong> {{ cubo.precio }}€</p>
+            <p><strong>Valoración:</strong> {{ cubo.valoracion }}</p>
+        </div>
+    </div>
+    <button class="btn btn-warning w-100 mt-2" [routerLink]="['/']">
+        Volver
+    </button>
+    <hr>
+    <app-comentarios [idCubo]="cubo.idCubo"></app-comentarios>
+</div>

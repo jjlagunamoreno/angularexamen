@@ -1,0 +1,10 @@
+<div class="container mt-4">
+    <h2>Comentarios</h2>
+    <ul class="list-group">
+        <li *ngFor="let comentario of comentarios" class="list-group-item">
+            <strong>{{ comentario.fechaComentario | date }} - Usuario: {{ comentario.idUsuario }}</strong>: {{
+            comentario.comentario
+            }}
+        </li>
+    </ul>
+</div>

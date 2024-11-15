@@ -1,0 +1,18 @@
+<div class="container mt-4">
+    <h1>Cubos de la marca <span class="text-danger">{{ marca }}</span></h1>
+    <hr class="border border-danger opacity-100">
+    <div class="row">
+        <div *ngFor="let cubo of cubos" class="col-md-4">
+            <div class="card mb-3">
+                <img [src]="cubo.imagen" class="card-img-top" alt="Cubo">
+                <div class="card-body">
+                    <h5 class="card-title">{{ cubo.nombre }}</h5>
+                    <p class="card-text">{{ cubo.precio }}€</p>
+                    <button class="btn btn-primary w-100 mt-3" [routerLink]="['/detalles', cubo.idCubo]">
+                        Detalles
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
